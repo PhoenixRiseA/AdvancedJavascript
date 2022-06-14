@@ -301,29 +301,28 @@ class Student{
         return Student.count++;     //this is how u access static variable
 
     }
-    eligibleForPlacement = () =>{
-
-        if(this.marks>=40 && this.age>19){
-            console.log("Eligible");
-        }else{
-            console.log("Not Eligible");
+    setPlacementAge(minPlacementAge){
+        console.log(this);
+        return (minMarks) =>{
+            if(this.marks > minMarks && this.age>minPlacementAge){
+                console.log(this.name," is eligible for placements");
+            }else{
+                console.log(this.name," is not ready for placements");
+            }
         }
-
     }
-
-   
 
 }
 
 let s1 = new Student('Jill', '19', '252345254', '77');
-let s2 = new Student('John' ,'21', '2523346534', '76');
+let s2 = new Student('John' ,'21', '2523346534', '30');
 let s3 = new Student('Jack','21', '2523534435', '39');
 let s4 = new Student('Korn','23', '2523435543', '60');
 let s5 = new Student('Kandy','18', '252346546', '20');
 
 console.log(Student.countStudent());
-s1.eligibleForPlacement();
-s2.eligibleForPlacement();
-s3.eligibleForPlacement();
-s4.eligibleForPlacement();
-s5.eligibleForPlacement();
+s1.setPlacementAge(18)(40);
+s2.setPlacementAge(18)(40);
+s3.setPlacementAge(18)(40);
+s4.setPlacementAge(18)(40);
+s5.setPlacementAge(18)(40);
