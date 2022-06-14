@@ -220,6 +220,72 @@
 // jillsRoom.cleanTable('some soap');
 // johnsRoom.cleanTable('some soap');
 
+// class Student{
+//     static count = 0;
+//     constructor(name, age, phoneNumber, marks){
+//         this.name = name;
+//         this.age = age;
+//         this.phoneNumber = phoneNumber;
+//         this.marks = marks;
+//         Student.countStudent();
+
+//     }
+//     static countStudent(){
+
+//         return Student.count++;     //this is how u access static variable
+
+//     }
+//     eligibleForCollege(){
+//         if(this.marks>=40){
+//             console.log('Eligible for college');
+//         }else{
+//             console.log('Not eligible for college');
+//         }
+
+//     }
+
+   
+
+// }
+
+// let s1 = new Student('Jill', '15', '252345254', '77');
+// let s2 = new Student('John' ,'15', '2523346534', '76');
+// let s3 = new Student('Jack','15', '2523534435', '39');
+// let s4 = new Student('Korn','15', '2523435543', '60');
+// let s5 = new Student('Kandy','15', '252346546', '20');
+
+// console.log(Student.countStudent());
+// s1.eligibleForCollege();
+// s2.eligibleForCollege();
+// s3.eligibleForCollege();
+// s4.eligibleForCollege();
+// s5.eligibleForCollege();
+
+"use strict";
+
+// var a = 4;
+
+// let square = () => {return a*a};
+// // console.log(square());
+// let mult = (a,b) => {return a*b};
+// console.log(mult(3,6));
+// var x = function(){
+    
+//     this.val = 1;
+//     setTimeout(() => {
+//         this.val++;
+//         console.log(this.val);
+//     },1)
+// };
+// var xx = new x();
+// spread operator
+// var x = (...n) =>{
+//     console.log(n[0]);
+// };
+
+// x(1,2,3);
+
+
 class Student{
     static count = 0;
     constructor(name, age, phoneNumber, marks){
@@ -235,11 +301,12 @@ class Student{
         return Student.count++;     //this is how u access static variable
 
     }
-    eligibleForCollege(){
-        if(this.marks>=40){
-            console.log('Eligible for college');
+    eligibleForPlacement = () =>{
+
+        if(this.marks>=40 && this.age>19){
+            console.log("Eligible");
         }else{
-            console.log('Not eligible for college');
+            console.log("Not Eligible");
         }
 
     }
@@ -248,15 +315,15 @@ class Student{
 
 }
 
-let s1 = new Student('Jill', '15', '252345254', '77');
-let s2 = new Student('John' ,'15', '2523346534', '76');
-let s3 = new Student('Jack','15', '2523534435', '39');
-let s4 = new Student('Korn','15', '2523435543', '60');
-let s5 = new Student('Kandy','15', '252346546', '20');
+let s1 = new Student('Jill', '19', '252345254', '77');
+let s2 = new Student('John' ,'21', '2523346534', '76');
+let s3 = new Student('Jack','21', '2523534435', '39');
+let s4 = new Student('Korn','23', '2523435543', '60');
+let s5 = new Student('Kandy','18', '252346546', '20');
 
 console.log(Student.countStudent());
-s1.eligibleForCollege();
-s2.eligibleForCollege();
-s3.eligibleForCollege();
-s4.eligibleForCollege();
-s5.eligibleForCollege();
+s1.eligibleForPlacement();
+s2.eligibleForPlacement();
+s3.eligibleForPlacement();
+s4.eligibleForPlacement();
+s5.eligibleForPlacement();
